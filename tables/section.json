@@ -1,0 +1,127 @@
+{
+  "name": "铁锈助手节名数据",
+  "data": [
+    {
+      "code": "core",
+      "translate": "核心",
+      "needName": false
+    },
+    {
+      "code": "graphics",
+      "translate": "图像",
+      "needName": false
+    },
+    {
+      "code": "attack",
+      "translate": "攻击",
+      "needName": false
+    },
+    {
+      "code": "turret",
+      "translate": "炮塔",
+      "needName": true
+    },
+    {
+      "code": "projectile",
+      "translate": "抛射体",
+      "needName": true
+    },
+    {
+      "code": "movement",
+      "translate": "运动",
+      "needName": false
+    },
+    {
+      "code": "ai",
+      "translate": "人机",
+      "needName": false
+    },
+    {
+      "code": "leg",
+      "translate": "腿",
+      "needName": true
+    },
+    {
+      "code": "arm",
+      "translate": "脚",
+      "needName": true
+    },
+    {
+      "code": "effect",
+      "translate": "效果",
+      "needName": true
+    },
+    {
+      "code": "animation",
+      "translate": "动画",
+      "needName": true
+    },
+    {
+      "code": "action",
+      "translate": "行动",
+      "needName": true
+    },
+    {
+      "code": "canBuild",
+      "translate": "可建造",
+      "needName": true
+    },
+    {
+      "code": "attachment",
+      "translate": "附属",
+      "needName": true
+    },
+    {
+      "code": "hiddenAction",
+      "translate": "隐藏行动",
+      "needName": true
+    },
+    {
+      "code": "global_resource",
+      "translate": "全局资源",
+      "needName": true,
+      "isVisible": "true"
+    },
+    {
+      "code": "template",
+      "translate": "模板",
+      "needName": true
+    },
+    {
+      "code": "resource",
+      "translate": "资源",
+      "needName": true,
+      "isVisible": true
+    },
+    {
+      "code": "placementRule",
+      "translate": "放置规则",
+      "needName": true,
+      "isVisible": false
+    },
+    {
+        "code": "MainUnit_DexUnits",
+        "translate": "原版单位",
+        "needName": true,
+        "isVisible": true
+    },
+    {
+      "code": "MainUnit_DexUnits——Else",
+      "translate": "特殊单位",
+      "needName": true,
+      "isVisible": true
+  },
+    {
+      "code": "uncategorized",
+      "translate": "未分类",
+      "needName": false,
+      "isAvailable": false
+    },
+    {
+      "code":"constant",
+      "translate":"变量",
+      "needName": true,
+      "isVisible": true
+    }    
+  ]
+}

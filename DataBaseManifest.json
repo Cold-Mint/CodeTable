@@ -1,0 +1,21 @@
+{
+    "id": "official",
+    "name": "铁锈助手官方数据集",
+    "author": "coldMint & jdsaling",
+    "describe": "铁锈助手2.0版本数据集，经过助手导入并编译为数据库后即可使用。",
+    "versionNumber": 11,
+    "versionName": "1.8 patch-1",
+    "updateLog": [
+        "2022-4-24 修复了逻辑语句无法正常提示的问题。",
+        "2022-4-8 修复部分代码译名不正确的问题。",
+        "2022-3-16 JDSALing进行后勤维护。部分代码资料来自API实验室的公开代码研究资料以及ECM制作组，在此非常感谢他们。",
+        "2022-3-13 coldMint编写制作。"
+    ],
+    "tables": {
+        "code": "/tables/code.json",
+        "chain_inspection": "/tables/chain_inspection.json",
+        "section": "/tables/section.json",
+        "value_type": "/tables/value_type.json",
+        "game_version": "/tables/game_version.json"
+    }
+}
