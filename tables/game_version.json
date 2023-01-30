@@ -24,6 +24,22 @@
     {
       "versionName": "1.15-p7",
       "versionNumber": 6
+    },
+    {
+      "versionName": "1.15-p8",
+      "versionNumber": 7
+    },
+    {
+      "versionName": "1.15-p9",
+      "versionNumber": 8
+    },
+    {
+      "versionName": "1.15-p10",
+      "versionNumber": 9
+    },
+    {
+      "versionName": "1.15",
+      "versionNumber": 10
     }
   ]
 }

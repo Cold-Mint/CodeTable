@@ -100,28 +100,64 @@
       "isVisible": false
     },
     {
-        "code": "MainUnit_DexUnits",
-        "translate": "原版单位",
+        "code": "vanillaUnit",
+        "translate": "原版单位对照表",
         "needName": true,
         "isVisible": true
     },
     {
-      "code": "MainUnit_DexUnits——Else",
-      "translate": "特殊单位",
+      "code": "vanillaDexUnit",
+      "translate": "特殊单位对照表",
       "needName": true,
       "isVisible": true
   },
     {
-      "code": "uncategorized",
-      "translate": "未分类",
+      "code": "logicBoolean",
+      "translate": "逻辑值",
       "needName": false,
       "isAvailable": false
     },
     {
-      "code":"constant",
-      "translate":"变量",
+      "code": "boolean",
+      "translate": "布尔值",
+      "needName": false,
+      "isAvailable": false
+    },
+    {
+      "code":"array",
+      "translate":"数组",
       "needName": true,
       "isVisible": true
-    }    
+    },
+    {
+      "code":"memory",
+      "translate":"内存",
+      "needName": true,
+      "isVisible": true
+    },
+    {
+      "code":"刷兵",
+      "translate":"reloadArmy",
+      "needName": true,
+      "isVisible": true
+    },
+    {
+      "code":"刷兵",
+      "translate":"reloadArmy",
+      "needName": true,
+      "isVisible": true
+    },
+    {
+      "code":"贴花",
+      "translate":"decal",
+      "needName": true,
+      "isVisible": true
+    },
+    {
+      "code":"杂项",
+      "translate":"misc",
+      "needName": true,
+      "isVisible": true
+    }                    
   ]
 }
