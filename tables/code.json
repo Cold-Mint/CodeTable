@@ -35,7 +35,8 @@
       "type": "resource",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "core,action,hiddenAction"
+      "section": "core,action,hiddenAction",
+      "demo":"代码示范[core]\n#写在Core组\nprice:5000"
     },
     {
       "code": "maxHp",
