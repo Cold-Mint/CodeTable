@@ -9,7 +9,7 @@
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
-      "demo": ""
+      "demo": "名称:单位名称"
     },
     {
       "code": "class",
@@ -9144,7 +9144,7 @@
     {
       "code": "self.readUnitMemory",
       "translate": "读取单位内存",
-      "description": "(name:string, type:string{boolean,unit,float,string,"demo":""}, [default])",
+      "description": "(name:string, type:string{boolean,unit,float,string, [default])",
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,

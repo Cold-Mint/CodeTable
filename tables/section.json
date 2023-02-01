@@ -142,12 +142,6 @@
       "isVisible": true
     },
     {
-      "code":"刷兵",
-      "translate":"reloadArmy",
-      "needName": true,
-      "isVisible": true
-    },
-    {
       "code":"贴花",
       "translate":"decal",
       "needName": true,
