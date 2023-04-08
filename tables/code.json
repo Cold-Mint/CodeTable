@@ -9,7 +9,7 @@
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
-      "demo": "名称:单位名称"
+      "demo": "中文：\n[核心]\n名称:单位名称\n\nEnglish:\n[core]\nname:demo"
     },
     {
       "code": "class",
@@ -19,7 +19,7 @@
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
-      "demo": ""
+      "demo": "中文：\n[核心]\n类:自定义单位元数据\n\nEnglish:\n[core]\nclass:CustomUnitMetadata"
     },
     {
       "code": "CustomUnitMetadata",
@@ -29,7 +29,7 @@
       "addVersion": 3,
       "removeVersion": -1,
       "section": "core",
-      "demo": ""
+      "demo": "中文：\n[核心]\n类:自定义单位元数据\n\nEnglish:\n[core]\nclass:CustomUnitMetadata"
     },
     {
       "code": "price",
@@ -39,7 +39,7 @@
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core,action,hiddenAction",
-      "demo": "代码示范[core]\n#写在Core组\nprice:5000"
+      "demo": "中文：\n[核心]\n价格:5000\n\nEnglish:\n[core]\nprice:5000"
     },
     {
       "code": "maxHp",
@@ -49,27 +49,27 @@
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
-      "demo": ""
+      "demo": "中文：\n[核心]\n生命值:5000\n\nEnglish:\n[core]\nmaxHp:5000"
     },
     {
       "code": "mass",
       "translate": "质量",
-      "description": "单位的“重量”定义了它与其他单位的碰撞方式，值越大，推动就越困难。",
+      "description": "单位的“重量”定义了它与其他单位的碰撞方式，值越大，其他小质量的单位推动它就越困难。",
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
-      "demo": ""
+      "demo": "中文：\n[核心]\n质量:1000\n\nEnglish:\n[core]\nmass:5000"
     },
     {
       "code": "techLevel",
       "translate": "科技等级",
-      "description": "设置单位的科技等级，共有3个级别，1级GUI显示为绿色，2、3级显示为黄色。",
+      "description": "设置单位的科技等级，共有3个级别，1级GUI显示为绿色，2、3级显示为黄色。\n他主要用于在早期的Build_From参数，现在已经不推荐使用此参数。",
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
-      "demo": ""
+      "demo": "中文：\n[核心]\n科技等级:3\n\nEnglish:\n[core]\ntechLevel:3"
     },
     {
       "code": "buildSpeed",
@@ -148,7 +148,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -158,7 +158,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -568,14 +568,14 @@
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "core",
+      "section": "core,logicBoolean",
       "demo": ""
     },
     {
       "code": "selfBuildRate",
       "translate": "自动建造速度",
       "description": "此单位自动构造所需要的时间，目前用于虫族。计算方式为：此处所填时间=1÷(60x你需要的秒)。",
-      "type": "float",
+      "type": "float,logicBoolean",
       "addVersion": 1,
       "removeVersion": -1,
       "section": "core",
@@ -664,21 +664,21 @@
     {
       "code": "total_frames",
       "translate": "总帧数",
-      "description": "默认值为1。将图像分割为指定分数，用于动画。第一帧编号为0,小坦的总帧数是3,因此它的移动帧为0,1,2而不是1,2,3",
+      "description": "默认值为1。将图像分割为指定分数，用于动画。第一帧编号为0,小坦的总帧数是3,因此它的移动帧为0,1,2而不是1,2,3\n\n可用范围：图像，效果，贴花",
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics,effect",
+      "section": "graphics,effect,decal",
       "demo": ""
     },
     {
       "code": "frame_width",
       "translate": "图像宽度",
-      "description": "设置单帧宽度，自动计算并覆盖总帧数。如果总帧数提供的图像宽度不是预想的宽度的话可以用此代码调整,一般不建议改变",
+      "description": "设置单帧宽度，自动计算并覆盖总帧数。如果总帧数提供的图像宽度不是预想的宽度的话可以用此代码调整,一般不建议改变\n\n可用范围：图像，效果，贴花",
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics,effect",
+      "section": "graphics,effect,decal",
       "demo": ""
     },
     {
@@ -724,12 +724,12 @@
     {
       "code": "image",
       "translate": "主体图像",
-      "description": "图像:填图片名称，格式为png。\r\n\r\n炮塔:使用自定义图片。覆盖单位的主炮塔图像。/r/n/r/n抛射体:使用自定义图片,覆盖默认的抛射体图片。/r/n/r/n效果:这个效果的图像,如果没有使用图像集则需要使用这个代码",
+      "description": "图像:填图片名称，格式为png。\r\n\r\n炮塔:使用自定义图片。覆盖单位的主炮塔图像。\r\n\r\n抛射体:使用自定义图片,覆盖默认的抛射体图片。\r\n\r\n效果:这个效果的图像,如果没有使用图像集则需要使用这个代码。\r\n\r\n贴花:调用的主要图像。以上均可填写图像路径，也可以使用CORE,ROOT,SHARED三大引导。下方Demo使用贴花组进行演示演示",
       "type": "baseImage",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics,turret,effect,projectile,comment",
-      "demo": ""
+      "section": "graphics,turret,effect,projectile,comment,decal",
+      "demo": "1.SHARED(调用铁锈共享图库):\n:中文：\n[贴花_图层]\n主体图像:SHARED:no_icon.png\n\nEnglish:\n[decal_图层]\nimage:SHARED:no_icon.png\n\n2.Index(直接调用相对路径):\n:中文：\n[贴花_图层]\n主体图像:icon.png\n\nEnglish:\n[decal_图层]\nimage:SHARED:icon.png\n\n3.CORE(调用铁锈包内资产文件夹【assets/units/】的资源):\n:中文：\n[贴花_图层]\n主体图像:CORE:tanks/tank.png\n\nEnglish:\n[decal_图层]\nimage:CORE:tanks/tank.pngn\n4.ROOT(调用自身模组包的绝对路径,在下方描述中，就即为你mod包中的tanks文件夹中的tank.png。):\n:中文：\n[贴花_图层]\n主体图像:ROOT:/tanks/tank.png\n\nEnglish:\n[decal_图层]\nimage:ROOT:/tanks/tank.png"
     },
     {
       "code": "showShotDelayBar",
@@ -774,11 +774,11 @@
     {
       "code": "image_shadow",
       "translate": "阴影图像",
-      "description": "填无或自动,或图像文件。",
+      "description": "填无或自动,或图像文件。\n贴花组：和图像组使用一样。重要提示:与图像组的阴影图像代码不同在于，这里无法使用AUTO,请填写文件。\n可用范围：图像，贴花。",
       "type": "image",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics",
+      "section": "graphics,decal",
       "demo": ""
     },
     {
@@ -788,7 +788,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -798,27 +798,27 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
       "code": "shadowOffsetX",
       "translate": "阴影图像偏移X轴",
-      "description": "阴影x轴偏移值，正数往右",
+      "description": "阴影x轴偏移值，正数往右\n\n可用范围：图像，贴花",
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics",
+      "section": "graphics,decal",
       "demo": ""
     },
     {
       "code": "shadowOffsetY",
       "translate": "阴影图像偏移Y轴",
-      "description": "阴影y轴偏移值，正数往下",
+      "description": "阴影y轴偏移值，正数往下\n\n可用范围：图像，贴花",
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics",
+      "section": "graphics,decal",
       "demo": ""
     },
     {
@@ -844,11 +844,11 @@
     {
       "code": "imageScale",
       "translate": "图像缩放比例",
-      "description": "根据原本的图像调整图像大小。默认值为1。也可以影响腿部和阴影图像。比起'缩放图像到',优点在于能快速调整图像比例大小",
+      "description": "根据原本的图像调整图像大小。默认值为1。也可以影响腿部和阴影图像。比起'缩放图像到',优点在于能快速调整图像比例大小\n贴花：可以使用动态逻辑。\n\n可用范围：图像，贴花",
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "graphics",
+      "section": "graphics,decal",
       "demo": ""
     },
     {
@@ -1028,7 +1028,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1038,7 +1038,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -1654,11 +1654,11 @@
     {
       "code": "color",
       "translate": "颜色",
-      "description": "炮弹:使用十六进制值对该弹丸重新着色,可以改变激光图像的颜色。\r\n\r\n效果:填16进制颜色值，给图像上叠加颜色。一般建议图像使用灰度图，然后叠加颜色。注意彩色图是无法叠加白色变白的。",
+      "description": "炮弹:使用十六进制值对该弹丸重新着色,可以改变激光图像的颜色。\r\n\r\n效果:填16进制颜色值，给图像上叠加颜色。一般建议图像使用灰度图，然后叠加颜色。注意彩色图是无法叠加白色变白的。\r\n\r\n贴花:可以使用16进制颜色或者ARGB值。\n\n可用范围：抛射体，效果，贴花",
       "type": "color",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "projectile,effect,comment",
+      "section": "projectile,effect,comment,decal",
       "demo": ""
     },
     {
@@ -1674,11 +1674,11 @@
     {
       "code": "frame",
       "translate": "帧",
-      "description": "要使用的内置图像帧，编号从零开始。",
+      "description": "抛射体:要使用的内置图像帧，编号从零开始。\n\n贴花：(与total_frames相比,frame可支持动态逻辑,可以改变内存等来修改第几帧。从而可以让Moder们做出更多惊人的东西。发挥想象力，你会探索其中的奥秘。)",
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "projectile",
+      "section": "projectile,decal",
       "demo": ""
     },
     {
@@ -1738,7 +1738,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1748,7 +1748,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1758,7 +1758,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1768,7 +1768,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1778,7 +1778,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1788,7 +1788,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -1798,7 +1798,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2088,7 +2088,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2228,7 +2228,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2238,7 +2238,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2248,7 +2248,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2258,7 +2258,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2268,7 +2268,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2728,7 +2728,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2738,7 +2738,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2748,7 +2748,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2758,7 +2758,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2768,7 +2768,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2778,7 +2778,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2898,7 +2898,7 @@
       "type": "logicBoolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2908,7 +2908,7 @@
       "type": "string",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2968,7 +2968,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2978,7 +2978,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2988,7 +2988,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -2998,7 +2998,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -3414,11 +3414,11 @@
     {
       "code": "isVisible",
       "translate": "可见",
-      "description": "默认为true,如果为false将隐藏单位。比如你写了一个行动,如果在行动里写了可见:假,则你不能在选中单位的右侧找到这个行动,另外写在图像节时可以让单位隐藏图像,相当于图像缩放比例:0",
+      "description": "默认为true,如果为false将隐藏单位。比如你写了一个行动,如果在行动里写了可见:假,则你不能在选中单位的右侧找到这个行动,另外写在图像节时可以让单位隐藏图像,相当于图像缩放比例:0\n\n可用范围：附属，行动，可建造，图像，贴花",
       "type": "logicBoolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "attachment,action,canBuild,graphics,comment",
+      "section": "attachment,action,canBuild,graphics,comment,decal",
       "demo": ""
     },
     {
@@ -4638,7 +4638,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -4728,7 +4728,7 @@
       "type": "image",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -5194,21 +5194,21 @@
     {
       "code": "xOffsetRelative",
       "translate": "X相对偏移量",
-      "description": "效果起始时相对于炮塔，炮弹，单位的偏移的方向位置。正数向右，负数向左。",
-      "type": "float",
+      "description": "效果起始时相对于炮塔，炮弹，单位的偏移的方向位置。正数向右，负数向左。从1.15开始，可支持动态逻辑。\n\n可用范围：效果，贴花",
+      "type": "float,logicBoolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
       "code": "yOffsetRelative",
       "translate": "Y相对偏移量",
-      "description": "效果起始时相对于炮塔，炮弹，单位的偏移的方向位置。正数向前，负数向后。",
-      "type": "float",
+      "description": "效果起始时相对于炮塔，炮弹，单位的偏移的方向位置。正数向前，负数向后。从1.15开始，可支持动态逻辑。\n\n可用范围：效果，贴花",
+      "type": "float,logicBoolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
@@ -5234,21 +5234,21 @@
     {
       "code": "xOffsetAbsolute",
       "translate": "X绝对偏移量",
-      "description": "Absolute类为绝对偏移，它不像Relative那样考虑单位的方向。比如设置x向速度为1，绝对偏移则始终向右移动，相对偏移可以向任意方向移动。",
-      "type": "float",
+      "description": "Absolute类为绝对偏移，它不像Relative那样考虑单位的方向。比如设置x向速度为1，绝对偏移则始终向右移动，相对偏移可以向任意方向移动。从1.15开始，可支持动态逻辑。\n\n可用范围：效果，贴花",
+      "type": "float,logicBoolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
       "code": "yOffsetAbsolute",
       "translate": "Y绝对偏移量",
-      "description": "按位置偏移起动效果，忽略附加炮塔单位等的方向。",
-      "type": "float",
+      "description": "按位置偏移起动效果，忽略附加炮塔单位等的方向。从1.15开始，可支持动态逻辑。\n\n可用范围：效果，贴花",
+      "type": "float,logicBoolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
@@ -5354,11 +5354,11 @@
     {
       "code": "hOffset",
       "translate": "高度偏移",
-      "description": "距目标的高度偏移。正数向上，负数向下。",
+      "description": "距目标的高度偏移。正数向上，负数向下。\n\n可用范围：效果，贴花",
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
@@ -5384,11 +5384,11 @@
     {
       "code": "dirOffset",
       "translate": "角度偏移",
-      "description": "角度偏移，修改初始朝向。注意,0度可能存在朝向问题。",
-      "type": "float",
+      "description": "角度偏移，修改初始朝向。注意,0度可能存在朝向问题。可使用动态逻辑\n\n可用范围：效果，贴花",
+      "type": "float,l",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
@@ -5504,11 +5504,11 @@
     {
       "code": "alpha",
       "translate": "透明度",
-      "description": "介于0-1之间。可以设置为大于1以延迟淡出效果",
+      "description": "介于0-1之间。可以设置为大于1以延迟淡出效果\n游戏不允许设置超过1的透明度，但你可通过动态逻辑超过。\n\n可用范围：效果，贴花",
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "effect,comment",
+      "section": "effect,comment,decal",
       "demo": ""
     },
     {
@@ -5608,7 +5608,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -5638,7 +5638,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -5658,7 +5658,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -5668,7 +5668,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -5678,7 +5678,7 @@
       "type": "float",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6058,7 +6058,7 @@
       "type": "audio",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6748,7 +6748,7 @@
       "type": "boolean",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6888,7 +6888,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6898,7 +6898,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6908,7 +6908,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6918,7 +6918,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6928,7 +6928,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6938,7 +6938,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6948,7 +6948,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6958,7 +6958,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6968,7 +6968,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6978,7 +6978,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6988,7 +6988,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -6998,7 +6998,7 @@
       "type": "if",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7008,7 +7008,7 @@
       "type": "unknown",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7018,7 +7018,7 @@
       "type": "unknown",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7028,7 +7028,7 @@
       "type": "unknown",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7038,7 +7038,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7048,7 +7048,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7058,7 +7058,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7068,7 +7068,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7078,7 +7078,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7088,7 +7088,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7098,7 +7098,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7108,7 +7108,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7118,7 +7118,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7128,7 +7128,7 @@
       "type": "self.isOverPassableTile",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7138,7 +7138,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7148,7 +7148,7 @@
       "type": "simpleLogicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7158,7 +7158,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7168,7 +7168,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7178,7 +7178,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7188,7 +7188,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7198,7 +7198,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7208,7 +7208,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7218,7 +7218,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7228,7 +7228,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7238,7 +7238,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7248,7 +7248,7 @@
       "type": "simpleLogicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7258,7 +7258,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7278,7 +7278,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7288,7 +7288,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7298,7 +7298,7 @@
       "type": "self.transportingCount",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7308,7 +7308,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7318,7 +7318,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7328,7 +7328,7 @@
       "type": "logicTimeStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7338,7 +7338,7 @@
       "type": "logicTimeStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7348,7 +7348,7 @@
       "type": "logicTimeStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7358,7 +7358,7 @@
       "type": "logicTimeStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7368,7 +7368,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7378,7 +7378,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7388,7 +7388,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7398,7 +7398,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7408,7 +7408,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7418,7 +7418,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7428,7 +7428,7 @@
       "type": "resource",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7438,7 +7438,7 @@
       "type": "resource",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7448,7 +7448,7 @@
       "type": "resource",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7458,7 +7458,7 @@
       "type": "resource",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7468,7 +7468,7 @@
       "type": "resource",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7478,7 +7478,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7488,7 +7488,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7498,7 +7498,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7508,7 +7508,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7518,7 +7518,7 @@
       "type": "int",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7528,7 +7528,7 @@
       "type": "resource",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+       "section": "logicBoolean",
       "demo": ""
     },
     {
@@ -7638,7 +7638,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7648,7 +7648,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7668,7 +7668,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7678,7 +7678,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7688,7 +7688,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7698,7 +7698,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7708,7 +7708,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7718,7 +7718,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7728,7 +7728,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7738,7 +7738,7 @@
       "type": "logicConstants",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7748,7 +7748,7 @@
       "type": "logicConstants",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7758,7 +7758,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7768,7 +7768,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7778,7 +7778,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7788,7 +7788,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7798,7 +7798,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7808,7 +7808,7 @@
       "type": "prefixKey",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7818,7 +7818,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7828,7 +7828,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7838,7 +7838,7 @@
       "type": "prefixKey",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7848,7 +7848,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7868,7 +7868,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7878,7 +7878,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7888,7 +7888,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7898,7 +7898,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7908,7 +7908,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7978,7 +7978,7 @@
       "type": "boolean",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -7998,7 +7998,7 @@
       "type": "boolean",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8008,7 +8008,7 @@
       "type": "boolean",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8048,127 +8048,7 @@
       "type": "float",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "anyRuleInGroup",
-      "translate": "放置规则组",
-      "description": "放置规则组名。（仅需要通过此组规则中的1条，而不是全部通过。在其他放置规则中可使用相同的组名称来创建组。）",
-      "type": "string",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "searchTags",
-      "translate": "检索标签",
-      "description": "搜索至少包含这些标签之一的任何单位",
-      "type": "tags",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "searchTeam",
-      "translate": "检索队伍",
-      "description": "要搜索的团队可以是：自身，中立，盟友非自身，盟友，敌人，任何。  ",
-      "type": "unknown",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "searchOffsetX",
-      "translate": "检索偏移",
-      "description": "检索偏移，默认为0",
-      "type": "float",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "searchDistance",
-      "translate": "搜索距离",
-      "description": "设置搜索距离。",
-      "type": "float",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "excludeIncompleteBuildings",
-      "translate": "排除不完整建筑",
-      "description": "排除不完整的建筑",
-      "type": "boolean",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "excludeNonBuildings",
-      "translate": "排除非建筑",
-      "description": "排除非建筑",
-      "type": "boolean",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "minCount",
-      "translate": "最小数量",
-      "description": "设定需要在搜索中找到的单位的最小数量。(如需要靠近某物)。默认值为0",
-      "type": "int",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "maxCount",
-      "translate": "最大数量",
-      "description": "在匹配失败前设置最大单位数量(例如不能接近某个值)。默认为无限的",
-      "type": "int",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "blocksPlacement",
-      "translate": "禁止放置",
-      "description": "禁止放置。默认为真。",
-      "type": "boolean",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "cannotPlaceMessage",
-      "translate": "失败信息",
-      "description": "如果此放置规则失败，则会向玩家显示消息（将成为mergedRuleGroup中的第一个失败规则）",
-      "type": "string",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
-      "demo": ""
-    },
-    {
-      "code": "checkEachTile",
-      "translate": "检查每个地块",
-      "description": "默认为真（仅对测试单元中心设置为假，真会检查显示在放置网格上的单元下方的每个图块）",
-      "type": "boolean",
-      "addVersion": 3,
-      "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8178,7 +8058,7 @@
       "type": "constant",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8208,7 +8088,7 @@
       "type": "withTag",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8218,7 +8098,7 @@
       "type": "logicConstants",
       "addVersion": 3,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8228,7 +8108,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8238,7 +8118,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8248,7 +8128,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8258,7 +8138,7 @@
       "type": "share",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8278,7 +8158,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8318,7 +8198,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8328,7 +8208,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8358,7 +8238,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8368,7 +8248,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8378,7 +8258,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8388,7 +8268,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8418,7 +8298,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8428,7 +8308,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8438,7 +8318,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8448,7 +8328,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8458,7 +8338,7 @@
       "type": "projectile",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8468,7 +8348,7 @@
       "type": "logicBoolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8478,7 +8358,7 @@
       "type": "time",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8488,7 +8368,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8498,7 +8378,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8508,7 +8388,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8518,7 +8398,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8528,7 +8408,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8538,7 +8418,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8548,7 +8428,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8558,7 +8438,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8568,7 +8448,7 @@
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8578,7 +8458,7 @@
       "type": "int",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8588,7 +8468,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8598,27 +8478,27 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
       "code": "pivotOffset",
-      "translate": "枢轴偏移",
-      "description": "像 dirOffset，但也旋转所有的相对键，并产生子效果",
-      "type": "float",
+      "translate": "枢轴偏移/坐标系旋转",
+      "description": "效果：像 dirOffset，但也旋转所有的相对键，并产生子效果\n\n贴花：(相当于把单位定位的直角坐标系旋转该角度,然后重新确定xy) 只影响X/Y相对偏移,不旋转图像)\n\n可用范围：效果，贴花(警告：该代码有多义，请使用时留意)",
+      "type": "float,logicBoolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "decal,effect",
       "demo": ""
     },
     {
       "code": "pivotOffsetRandom",
       "translate": "枢轴偏移随机",
-      "description": "枢轴偏移随机",
-      "type": "boolean",
+      "description": "-",
+      "type": "misc",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8628,7 +8508,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8638,7 +8518,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8648,7 +8528,7 @@
       "type": "unit",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8658,7 +8538,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8668,7 +8548,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8678,7 +8558,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8688,7 +8568,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8698,7 +8578,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8708,7 +8588,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8718,7 +8598,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8728,7 +8608,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8738,7 +8618,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8748,7 +8628,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8758,7 +8638,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8768,7 +8648,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8778,7 +8658,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8788,7 +8668,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8798,7 +8678,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8808,7 +8688,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8818,7 +8698,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8828,7 +8708,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8838,7 +8718,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8848,7 +8728,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8858,7 +8738,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8868,7 +8748,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8878,7 +8758,7 @@
       "type": "unit",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8888,7 +8768,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8898,7 +8778,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8908,7 +8788,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8918,7 +8798,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8928,7 +8808,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8938,7 +8818,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8948,7 +8828,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8958,7 +8838,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8968,7 +8848,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8978,7 +8858,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8988,7 +8868,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -8998,7 +8878,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9008,7 +8888,7 @@
       "type": "unknown",
       "addVersion": 6,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9018,7 +8898,7 @@
       "type": "logicalConditionStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9028,7 +8908,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9038,7 +8918,7 @@
       "type": "self.isResourceLargerThan",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9048,7 +8928,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9058,7 +8938,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9068,7 +8948,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9078,7 +8958,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9088,7 +8968,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9098,7 +8978,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9108,7 +8988,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9118,7 +8998,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9128,7 +9008,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9138,7 +9018,7 @@
       "type": "logicQuantityStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9148,7 +9028,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9158,7 +9038,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9168,7 +9048,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9178,7 +9058,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9188,7 +9068,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9198,7 +9078,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9208,7 +9088,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9218,7 +9098,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9228,7 +9108,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9238,7 +9118,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9248,7 +9128,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9258,7 +9138,7 @@
       "type": "unit",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9268,7 +9148,7 @@
       "type": "marker",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9278,7 +9158,7 @@
       "type": "marker",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9288,7 +9168,7 @@
       "type": "marker",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9298,7 +9178,7 @@
       "type": "marker",
       "addVersion": 5,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9308,7 +9188,7 @@
       "type": "marker",
       "addVersion": 5,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9318,7 +9198,7 @@
       "type": "unknown",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9328,7 +9208,7 @@
       "type": "distance",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9338,7 +9218,7 @@
       "type": "distance",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9348,7 +9228,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9358,7 +9238,7 @@
       "type": "boolean",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -9368,7 +9248,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9378,7 +9258,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9388,7 +9268,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9398,7 +9278,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9408,7 +9288,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9418,7 +9298,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9428,7 +9308,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9438,7 +9318,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9448,7 +9328,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9458,7 +9338,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9468,7 +9348,7 @@
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits——Else",
+      "section": "vanillaDexUnit",
       "demo": ""
     },
     {
@@ -9478,7 +9358,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9488,7 +9368,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9498,7 +9378,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9508,7 +9388,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9518,7 +9398,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9528,7 +9408,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9538,7 +9418,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9548,7 +9428,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9558,7 +9438,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9568,7 +9448,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9578,7 +9458,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9588,7 +9468,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9598,7 +9478,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9608,7 +9488,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9618,7 +9498,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9628,7 +9508,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9638,7 +9518,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9648,7 +9528,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9658,7 +9538,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9668,7 +9548,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9678,7 +9558,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9688,7 +9568,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9698,7 +9578,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9708,7 +9588,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9718,7 +9598,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9728,7 +9608,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9738,7 +9618,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9748,7 +9628,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9758,7 +9638,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9768,7 +9648,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9778,7 +9658,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9788,7 +9668,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9798,7 +9678,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9808,7 +9688,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9818,7 +9698,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9828,7 +9708,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9838,7 +9718,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9848,7 +9728,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9858,7 +9738,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9868,7 +9748,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9878,7 +9758,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9888,7 +9768,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9898,7 +9778,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9908,7 +9788,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9918,7 +9798,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9928,7 +9808,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9938,7 +9818,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9948,7 +9828,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9958,7 +9838,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9968,7 +9848,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9978,7 +9858,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9988,7 +9868,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -9998,7 +9878,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10008,7 +9888,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10018,7 +9898,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10028,7 +9908,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10038,7 +9918,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10048,7 +9928,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10058,7 +9938,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10068,7 +9948,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10078,7 +9958,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10088,7 +9968,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10098,7 +9978,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10108,7 +9988,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10118,7 +9998,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10128,7 +10008,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10138,7 +10018,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10148,7 +10028,7 @@
       "type": "internalUnits",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "MainUnit_DexUnits",
+      "section": "vanillaUnit",
       "demo": ""
     },
     {
@@ -10158,7 +10038,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10168,7 +10048,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10178,7 +10058,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10188,7 +10068,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10198,7 +10078,7 @@
       "type": "noPromptLogicConstant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10208,7 +10088,7 @@
       "type": "logicConstants",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10218,7 +10098,7 @@
       "type": "logicConstants",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10238,7 +10118,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10248,7 +10128,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10258,7 +10138,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10268,7 +10148,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10278,7 +10158,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10288,7 +10168,7 @@
       "type": "constant",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10298,7 +10178,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10308,7 +10188,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10318,7 +10198,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10328,7 +10208,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10338,7 +10218,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10348,7 +10228,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10358,7 +10238,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10368,7 +10248,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10378,7 +10258,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10388,7 +10268,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10398,7 +10278,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10408,7 +10288,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10418,7 +10298,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10428,7 +10308,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10438,7 +10318,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10448,7 +10328,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10458,7 +10338,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10468,7 +10348,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10478,7 +10358,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10488,7 +10368,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10498,7 +10378,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10508,7 +10388,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10518,7 +10398,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10528,7 +10408,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10538,7 +10418,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10548,7 +10428,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10558,7 +10438,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10568,7 +10448,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10578,7 +10458,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10588,7 +10468,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10598,7 +10478,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10608,7 +10488,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10618,7 +10498,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10628,7 +10508,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10638,7 +10518,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10648,7 +10528,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10658,7 +10538,7 @@
       "type": "countryCode",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10668,7 +10548,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10678,7 +10558,7 @@
       "type": "float",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10688,7 +10568,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10698,7 +10578,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10708,7 +10588,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10718,7 +10598,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10728,7 +10608,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10738,7 +10618,7 @@
       "type": "constant",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10748,7 +10628,7 @@
       "type": "resource",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10758,7 +10638,7 @@
       "type": "resource",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10768,7 +10648,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10778,7 +10658,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10788,7 +10668,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10798,7 +10678,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10808,7 +10688,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10818,7 +10698,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10828,7 +10708,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10838,7 +10718,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10848,7 +10728,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10858,7 +10738,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10868,7 +10748,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10878,7 +10758,7 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
     },
     {
@@ -10888,8 +10768,438 @@
       "type": "boolean",
       "addVersion": 4,
       "removeVersion": -1,
-      "section": "uncategorized",
+      "section": "Specific",
       "demo": ""
+    },
+    {
+      "code": "anyRuleInGroup",
+      "translate": "放置规则组",
+      "description": "放置规则组名。（仅需要通过此组规则中的1条，而不是全部通过。在其他放置规则中可使用相同的组名称来创建组。）在下方的Demo中，我们使用了Red，所以也要加一个对应的放置规则节。",
+      "type": "string",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n放置规则组:Red\n\nEnglish:\n[placementRule_rules]\nanyRuleInGroup:Red"
+    },
+    {
+      "code": "searchTags",
+      "translate": "检索标签",
+      "description": "搜索至少包含这些标签之一的任何单位，在检索之前确保有这个标签。",
+      "type": "tags",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n检索标签:Red\n\nEnglish:\n[placementRule_rules]\nsearchTags:Red"
+    },
+    {
+      "code": "searchTeam",
+      "translate": "检索队伍",
+      "description": "检索队伍，要搜索的团队可以是：自身|中立|盟友非自身|盟友|敌人|任何。  own|neutral|allyNotOwn|ally|enemy|any",
+      "type": "team",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n检索队伍:敌人\n\nEnglish:\n[placementRule_rules]\nsearchTeam:enemy"
+    },
+    {
+      "code": "searchOffsetX",
+      "translate": "检索偏移量X",
+      "description": "检索X轴偏移，默认为0。用法与炮塔定位坐标差不多。",
+      "type": "float",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n检索偏移量X:4\n\nEnglish:\n[placementRule_rules]\nsearchOffsetX:4"
+    },
+    {
+      "code": "searchOffsetY",
+      "translate": "检索偏移量Y",
+      "description": "检索Y轴偏移，默认为0。用法与炮塔定位坐标差不多。",
+      "type": "float",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n检索偏移量Y:4\n\nEnglish:\n[placementRule_rules]\nsearchOffsetY:4"
+    },
+    {
+      "code": "searchDistance",
+      "translate": "搜索距离",
+      "description": "搜索距离,从而限制放置规则条件。",
+      "type": "float",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n搜索距离:99\n\nEnglish:\n[placementRule_rules]\nsearchDistance:99"
+    },
+    {
+      "code": "excludeIncompleteBuildings",
+      "translate": "排除不完整建筑",
+      "description": "排除不完整建筑,指的是那些还没有完全建造好的建筑。填写布尔值，无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n排除不完整建筑:真\n\nEnglish:\n[placementRule_rules]\nexcludeIncompleteBuildings:true"
+    },
+    {
+      "code": "excludeNonBuildings",
+      "translate": "排除非建筑",
+      "description": "排除非建筑,指的是那些根本就不是建筑的单位。填写布尔值，无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n排除非建筑:真\n\nEnglish:\n[placementRule_rules]\nexcludeNonBuildings:true"
+    },
+    {
+      "code": "minCount",
+      "translate": "最小数量",
+      "description": "设定需要在搜索中找到的单位的最小数量。(如需要靠近某物)。默认值为0",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n最小数量:6\n\nEnglish:\n[placementRule_rules]\nminCount:6"
+    },
+    {
+      "code": "maxCount",
+      "translate": "最大数量",
+      "description": "在匹配失败前设置最大单位数量(例如不能接近某个值)。默认为无限的",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n最大数量:1\n\nEnglish:\n[placementRule_rules]\nmaxCount:1"
+    },
+    {
+      "code": "blocksPlacement",
+      "translate": "禁止放置",
+      "description": "禁止放置。默认为true。",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n禁止放置:真\n\nEnglish:\n[placementRule_rules]\nblocksPlacement:true"
+    },
+    {
+      "code": "cannotPlaceMessage",
+      "translate": "放置失败信息",
+      "description": "如果此放置规则失败，则会向玩家显示消息（将成为mergedRuleGroup中的第一个失败规则）。",
+      "type": "string",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n放置失败信息:不能在这里建造\n\nEnglish:\n[placementRule_rules]\ncannotPlaceMessage:不能在这里建造"
+    },
+    {
+      "code": "checkEachTile",
+      "translate": "检查每个地块",
+      "description": "[true / false]默认为true（仅对测试单元中心设置为false，true会检查显示在放置网格上的单元下方的每个图块）",
+      "type": "string",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "placementRule",
+      "demo": "中文：\n[放置规则_rules]\n检查每个地块:真\n\nEnglish:\n[placementRule_rules]\ncheckEachTile:true"
+    },
+    {
+      "code": "layer",
+      "translate": "绘制图层",
+      "description": "绘制贴画的图层，参数可以为（shadow, beforeBody, afterBody, onTop, beforeUI）",
+      "type": "decallayer",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n绘制图层:在顶部\n\nEnglish:\n[decal_图层]\nlayer:onTop"
+    },
+    {
+      "code": "order",
+      "translate": "排序",
+      "description": "默认为0并且按照ini里的顺序，优先级排序。",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n排序:3\n\nEnglish:\n[decal_图层]\norder:3"
+    },
+    {
+      "code": "onlyWhenSelectedByOwnPlayer",
+      "translate": "我方队伍选中时绘制",
+      "description": "当我方队伍选中后绘制该Decal(贴花),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n我方队伍选中时绘制:真\n\nEnglish:\n[decal_图层]\nonlyWhenSelectedByOwnPlayer:true"
+    },
+    {
+      "code": "onlyWhenSelectedByEnemyPlayer",
+      "translate": "敌方队伍选中时绘制",
+      "description": "当敌方队伍选中后绘制该Decal(贴花),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n敌方队伍选中时绘制:真\n\nEnglish:\n[decal_图层]\nonlyWhenSelectedByEnemyPlayer:true"
+    },
+    {
+      "code": "onlyWhenSelectedByAllyNotOwnPlayer",
+      "translate": "我方盟友选中时绘制",
+      "description": "当我方盟友队伍选中后绘制该Decal(贴花),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n盟友队伍选中时绘制:真\n\nEnglish:\n[decal_图层]\nonlyWhenSelectedByAllyNotOwnPlayer:true"
+    },
+    {
+      "code": "onlyWhenSelectedByAnyPlayer",
+      "translate": "任意玩家选中时绘制",
+      "description": "任意玩家被选中后绘制该Decal(贴花),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n任意玩家选中时绘制:真\n\nEnglish:\n[decal_图层]\nonlyWhenSelectedByAnyPlayer:true"
+    },
+    {
+      "code": "includeParentsSelection",
+      "translate": "包含父单位选中时绘制",
+      "description": "包含父单位被选中后绘制该Decal(贴花),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n包含父单位选中时绘制:真\n\nEnglish:\n[decal_图层]\nincludeParentsSelection:true"
+    },
+    {
+      "code": "onlyPlayersWithUnitControl",
+      "translate": "使用者能够控制此单位时绘制",
+      "description": "仅在查看者能够控制此单位时绘制该Decal(贴花),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n使用者能够控制此单位时绘制:真\n\nEnglish:\n[decal_图层]\nonlyPlayersWithUnitControl:true"
+    },
+    {
+      "code": "onlyWithZoomLevelOrMore",
+      "translate": "缩放到当前大小或更大时绘制",
+      "description": "仅当缩放到当前大小或更大时绘制该Decal(推测啥都不动进游戏就是1倍缩放) ",
+      "type": "float",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n缩放到当前大小或更大时绘制:2\n\nEnglish:\n[decal_图层]\nonlyWithZoomLevelOrMore:2"
+    },
+    {
+      "code": "onlyWhileActive",
+      "translate": "单位建造完成时绘制",
+      "description": "仅在单位建造完成时绘制该Decal(比如建造者建造一般的建筑就不算),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n单位建造完成时绘制:真\n\nEnglish:\n[decal_图层]\nonlyWhileActive:true"
+    },
+    {
+      "code": "onlyWhileAlive",
+      "translate": "单位存活时绘制",
+      "description": "(如果图层(layer)为beforeUI默认为true,否则false)仅在存活时绘制该Decal(为true死后消失),使用布尔值进行。无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n单位存活时绘制:真\n\nEnglish:\n[decal_图层]\nonlyWhileAlive:true"
+    },
+    {
+      "code": "onlyInPreview",
+      "translate": "侧边栏和建筑放置预览中显示",
+      "description": "仅在侧边栏和建筑放置预览中显示,使用布尔值进行。无法使用动态逻辑",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n侧边栏和建筑放置预览中显示:真\n\nEnglish:\n[decal_图层]\nonlyInPreview:true"
+    },
+    {
+      "code": "onlyOnNonPreview",
+      "translate": "仅在非预览中显示",
+      "description": "仅在非预览中显示(与上一条相反),使用布尔值进行。无法使用动态逻辑",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n仅在非预览中显示:真\n\nEnglish:\n[decal_图层]\nonlyOnNonPreview:true"
+    },
+    {
+      "code": "imageScaleX",
+      "translate": "图像X轴缩放",
+      "description": "图像X轴缩放(倍数)，这个不用过多介绍了吧。他们仍然可以使用动态逻辑，例如：(self.resource.持续时间/90)",
+      "type": "float,logicBoolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n图像X轴缩放:5\n\nEnglish:\n[decal_图层]\nimageScaleX:5"
+    },
+    {
+      "code": "imageScaleY",
+      "translate": "图像Y轴缩放",
+      "description": "图像Y轴缩放(倍数)，这个不用过多介绍了吧。他们仍然可以使用动态逻辑，例如：(self.resource.持续时间/90)",
+      "type": "float,logicBoolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n图像Y轴缩放:5\n\nEnglish:\n[decal_图层]\nimageScaleY:5"
+    },
+    {
+      "code": "teamColors",
+      "translate": "阵营色强制渲染",
+      "description": "为该Decal(贴花)强制渲染阵营色,无效的话你可能需要开启OpenGL实验性功能。使用布尔值进行。无法使用动态逻辑",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n阵营色强制渲染:真\n\nEnglish:\n[decal_图层]\nteamColors:5"
+    },
+    {
+      "code": "imageStack",
+      "translate": "图像堆栈列表",
+      "description": "(使用PNG文件进行2.5D图像渲染,但确定是用于2.5d单位)/例子：imageStack:1层贴图.png,2层贴图.png,3层贴图.png,....",
+      "type": "baseImage",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n图像堆栈列表:1.png,2.png,3.png,4.png\n\nEnglish:\n[decal_图层]\nimageStack:1.png,2.png,3.png,4.png"
+    },
+    {
+      "code": "stack_hOffset",
+      "translate": "堆栈高度偏移",
+      "description": "填写浮点值，从而使图像堆栈列表进行高度偏移。",
+      "type": "float",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n堆栈高度偏移:1.3\n\nEnglish:\n[decal_图层]\nstack_hOffset:1.3"
+    },
+    {
+      "code": "stack_frameOffset",
+      "translate": "堆栈帧偏移",
+      "description": "填写整型值，从而使图像堆栈列表进行帧偏移。",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n堆栈帧偏移:3\n\nEnglish:\n[decal_图层]\nstack_frameOffset:3"
+    },
+    {
+      "code": "stack_drawInReverseOrder",
+      "translate": "堆栈绘图顺序",
+      "description": "填写布尔值，效果不太清楚，待各位自行测试。",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n堆栈绘图顺序:真\n\nEnglish:\n[decal_图层]\nstack_drawInReverseOrder:true"
+    },
+    {
+      "code": "stack_indexStart",
+      "translate": "堆栈起始图像",
+      "description": "填写整形值，以告诉游戏从谁开始作为起始图像值。",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n堆栈起始图像:4\n\nEnglish:\n[decal_图层]\nstack_indexStart:4"
+    },
+    {
+      "code": "stack_indexCount",
+      "translate": "堆栈图像数量",
+      "description": "填写整形值",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n堆栈图像数量:4\n\nEnglish:\n[decal_图层]\nstack_indexCount:4"
+    },
+    {
+      "code": "onlyTeam",
+      "translate": "查看者为特定队伍时显示",
+      "description": "仅在查看者为特定队伍时显示该Decal(贴花),参数可以为(own|notOwn|neutral|allyNotOwn|ally|enemy|any)",
+      "type": "team",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n查看者为特定队伍时显示:敌人\n\nEnglish:\n[decal_图层]\nonlyTeam:enemy"
+    },
+    {
+      "code": "alwaysStartDirAtZero",
+      "translate": "固定角度为零",
+      "description": "总是固定角度为零(总是朝上),填写布尔值，无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n固定角度为零:真\n\nEnglish:\n[decal_图层]\nalwaysStartDirAtZero:true"
+    },
+    {
+      "code": "alwaysStartHeightAtZero",
+      "translate": "固定高度为零",
+      "description": "总是固定角度为零(总是朝上),填写布尔值，无法使用动态逻辑。",
+      "type": "boolean",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n固定高度为零:真\n\nEnglish:\n[decal_图层]\nalwaysStartHeightAtZero:true"
+    },
+    {
+      "code": "basePosition",
+      "translate": "中心位置",
+      "description": "(贴花)Decal的中心位置(填单位参考)/或者填写临时标记:(self.x+10,self.y+10)",
+      "type": "unit,marker",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n中心位置:tank\n\nEnglish:\n[decal_图层]\nbasePosition:tank"
+    },
+    {
+      "code": "basePositionFromLegEnd",
+      "translate": "指定脚为中心位置",
+      "description": "(贴花)Decal的中心位置(填自身的leg节名字，例如[leg_test]，那么就填写test(参考Demo))/或者填写临时标记:(self.x+10,self.y+10)",
+      "type": "leg,marker",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n指定脚为中心位置:test\n\nEnglish:\n[decal_图层]\nbasePositionFromLegEnd:test"
+    },
+    {
+      "code": "basePositionFromTurretEnd",
+      "translate": "指定炮塔为中心位置",
+      "description": "(贴花)Decal的中心位置(填自身的turret节名字，例如[turret_Main]，那么就填写Main(参考Demo))/或者填写临时标记:(self.x+10,self.y+10)",
+      "type": "turret,marker",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n指定炮塔为中心位置:Main\n\nEnglish:\n[decal_图层]\nbasePositionFromTurretEnd:Main"
+    },
+    {
+      "code": "drawLineTo",
+      "translate": "绘制线条",
+      "description": "绘制线条到(受到颜色和宽度影像) (填单位参考)/或者填写临时标记:(self.x+10,self.y+10)",
+      "type": "unit,marker",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n绘制线条:tank\n\nEnglish:\n[decal_图层]\ndrawLineTo:tank"
+    },
+    {
+      "code": "lineWidth",
+      "translate": "线宽度",
+      "description": "绘制线的宽度，填写浮点值",
+      "type": "float",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "decal",
+      "demo": "中文：\n[贴花_图层]\n线宽度:1.5\n\nEnglish:\n[decal_图层]\nlineWidth:1.5"
     }
   ]
 }

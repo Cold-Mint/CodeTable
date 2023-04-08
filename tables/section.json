@@ -97,7 +97,7 @@
       "code": "placementRule",
       "translate": "放置规则",
       "needName": true,
-      "isVisible": false
+      "isVisible": true
     },
     {
         "code": "vanillaUnit",
@@ -115,11 +115,25 @@
       "code": "logicBoolean",
       "translate": "逻辑值",
       "needName": false,
-      "isAvailable": false
+      "isAvailable": false,
+      "isVisible":true
+    },
+    {
+      "code": "comment",
+      "translate": "注解",
+      "needName": false,
+      "isAvailable": false,
+      "isVisible":false
     },
     {
       "code": "boolean",
       "translate": "布尔值",
+      "needName": false,
+      "isAvailable": false
+    },
+    {
+      "code": "Specific",
+      "translate": "特定值",
       "needName": false,
       "isAvailable": false
     },
@@ -136,22 +150,22 @@
       "isVisible": true
     },
     {
-      "code":"刷兵",
-      "translate":"reloadArmy",
+      "code":"reloadArmy",
+      "translate":"刷兵",
+      "needName": true,
+      "isVisible": false
+    },
+    {
+      "code":"decal",
+      "translate":"贴花",
       "needName": true,
       "isVisible": true
     },
     {
-      "code":"贴花",
-      "translate":"decal",
+      "code":"misc",
+      "translate":"杂项",
       "needName": true,
-      "isVisible": true
-    },
-    {
-      "code":"杂项",
-      "translate":"misc",
-      "needName": true,
-      "isVisible": true
-    }                    
+      "isVisible": false
+    }                           
   ]
 }
