@@ -662,6 +662,56 @@
       "demo": ""
     },
     {
+      "code": "updateUnitMemory",
+      "translate": "内存更新",
+      "description": "比【action_#】setUnitMemory更快的内存更新。在许多应用上很有用。",
+      "type": "memory",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "core",
+      "demo": "中文：\n[核心]\n内存更新:timeCount += 1\n\nEnglish:\n[core]\nupdateUnitMemory: timeCount += 1"
+    },
+    {
+      "code": "updateUnitMemoryRate",
+      "translate": "内存更新频率",
+      "description": "设置内存更新的频率。默认值为1。设置为0将更新内存每帧。",
+      "type": "int",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "core",
+      "demo": "中文：\n[核心]\n内存更新频率:0\n\nEnglish:\n[core]\nupdateUnitMemoryRate:0"
+    },
+    {
+      "code": "memory",
+      "translate": "内存",
+      "description": "一种模板友好的定义单位内存方法。声明名称后接类型，以冒号分隔",
+      "type": "macro",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "core",
+      "demo": "中文：\n[核心]\n@定义内存 fish:\n\nEnglish:\n[core]\n@memory fish:unit"
+    },
+    {
+      "code": "@memory",
+      "translate": "@定义内存",
+      "description": "一种模板友好的定义单位内存方法。声明名称后接类型，以冒号分隔",
+      "type": "macro",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "core",
+      "demo": "中文：\n[核心]\n@定义内存 fish:\n\nEnglish:\n[core]\n@memory fish:unit"
+    },
+    {
+      "code": "@memory X",
+      "translate": "@定义内存 X",
+      "description": "定义此单元的内存，也必须定义其类型。",
+      "type": "macro",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "core",
+      "demo": "中文：\n[核心]\n@定义内存 transportCount:float\n\nEnglish:\n[core]\n@memory transportCount:float"
+    },
+    {
       "code": "total_frames",
       "translate": "总帧数",
       "description": "默认值为1。将图像分割为指定分数，用于动画。第一帧编号为0,小坦的总帧数是3,因此它的移动帧为0,1,2而不是1,2,3\n\n可用范围：图像，效果，贴花",
@@ -5518,7 +5568,7 @@
       "type": "boolean",
       "addVersion": 2,
       "removeVersion": -1,
-      "section": "effect",
+      "section": "effect,decal",
       "demo": ""
     },
     {
@@ -8205,11 +8255,11 @@
       "code": "defineUnitMemory",
       "translate": "定义单位内存",
       "description": "为每个单元创建唯一的自定义存储变量。允许的类型:boolean, float/number, unit, string,defineUnitMemory: boolean nukeActive, boolean laserReady, float experience, unit nextTarget, unit homeBase, string customText",
-      "type": "unknown",
+      "type": "macro,memory",
       "addVersion": 1,
       "removeVersion": -1,
       "section": "Specific",
-      "demo": ""
+      "demo": "defineUnitMemory: boolean nukeActive, boolean laserReady, float experience, unit nextTarget, unit homeBase, string customText"
     },
     {
       "code": "autoTriggerCooldownTime_allowDangerousHighCPU",
@@ -8483,7 +8533,7 @@
     },
     {
       "code": "pivotOffset",
-      "translate": "枢轴偏移/坐标系旋转",
+      "translate": "枢轴偏移",
       "description": "效果：像 dirOffset，但也旋转所有的相对键，并产生子效果\n\n贴花：(相当于把单位定位的直角坐标系旋转该角度,然后重新确定xy) 只影响X/Y相对偏移,不旋转图像)\n\n可用范围：效果，贴花(警告：该代码有多义，请使用时留意)",
       "type": "float,logicBoolean",
       "addVersion": 1,
@@ -8584,8 +8634,8 @@
     {
       "code": "setUnitMemory",
       "translate": "设置单位内存",
-      "description": "键值对。改变此单元的内存，值可以用逻辑设定。内存必须首先用defineUnitMemory定义。",
-      "type": "unknown",
+      "description": "改变本单元的内存，值可以用逻辑设置。内存必须首先用“定义单位内存”代码定义",
+      "type": "macro,memory",
       "addVersion": 1,
       "removeVersion": -1,
       "section": "Specific",
@@ -9022,13 +9072,23 @@
       "demo": ""
     },
     {
-      "code": "self.readUnitMemory",
-      "translate": "读取单位内存",
-      "description": "(name:string, type:string{boolean,unit,float,string, [default])",
-      "type": "unknown",
+      "code": "self.readUnitMemory()",
+      "translate": "自身.读取单位内存",
+      "description": "读取单位内存，例子：(name:string, type:string{boolean,unit,float,string, [default])",
+      "type": "Specific",
       "addVersion": 1,
       "removeVersion": -1,
-      "section": "Specific",
+      "section": "Specific,looginBoolean",
+      "demo": "中文：\n[core]\n[action_升级]\n可用: 如果 父单位.读取单位内存('boostTarget', type='unit') == self\n\nEnglish:isActive: if parent.readUnitMemory('boostTarget', type='unit') == self"
+    },
+    {
+      "code": "readUnitMemory",
+      "translate": "读取单位内存",
+      "description": "从单元引用中读取内存（例如，自己，父类）",
+      "type": "Specific",
+      "addVersion": 1,
+      "removeVersion": -1,
+      "section": "Specific,looginBoolean",
       "demo": ""
     },
     {
@@ -9254,7 +9314,7 @@
     {
       "code": "zonemarker",
       "translate": "区域标记",
-      "description": "此单位用于指示伤害边框移动到何处，是放大还是缩小，可使用“techLevel”控制大小。游戏内部极特殊单位。",
+      "description": "此单位用于指示伤害边框移动到何处，是放大还是缩小，可使用“techLevel”控制大小。游戏内部极特殊单位。可以通过代码调用它。",
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
@@ -9264,7 +9324,7 @@
     {
       "code": "showFog",
       "translate": "迷雾",
-      "description": "就是游戏里面的迷雾，游戏内部极特殊单位。",
+      "description": "就是游戏里面的迷雾，游戏内部极特殊单位。可以通过代码调用它。",
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
@@ -9274,7 +9334,7 @@
     {
       "code": "editorOrBuilder",
       "translate": "沙盒建造者",
-      "description": "沙盒模式的控制终端，游戏内部的极特殊单位。若在非沙盒模式出现会让游戏崩溃",
+      "description": "沙盒模式的控制终端，游戏内部的极特殊单位。可以通过代码调用它。",
       "type": "noParameterLogicStatement",
       "addVersion": 1,
       "removeVersion": -1,
@@ -10903,23 +10963,23 @@
     },
     {
       "code": "layer",
-      "translate": "绘制图层",
-      "description": "绘制贴画的图层，参数可以为（shadow, beforeBody, afterBody, onTop, beforeUI）",
+      "translate": "绘制贴花图层",
+      "description": "绘制贴花的图层，参数可以为（shadow, beforeBody, afterBody, onTop, beforeUI）",
       "type": "decallayer",
       "addVersion": 4,
       "removeVersion": -1,
       "section": "decal",
-      "demo": "中文：\n[贴花_图层]\n绘制图层:在顶部\n\nEnglish:\n[decal_图层]\nlayer:onTop"
+      "demo": "中文：\n[贴花_图层]\n绘制贴花图层:绘制顶部\n\nEnglish:\n[decal_图层]\nlayer:onTop"
     },
     {
       "code": "order",
-      "translate": "排序",
+      "translate": "贴花排序",
       "description": "默认为0并且按照ini里的顺序，优先级排序。",
       "type": "int",
       "addVersion": 4,
       "removeVersion": -1,
       "section": "decal",
-      "demo": "中文：\n[贴花_图层]\n排序:3\n\nEnglish:\n[decal_图层]\norder:3"
+      "demo": "中文：\n[贴花_图层]\n贴花排序:3\n\nEnglish:\n[decal_图层]\norder:3"
     },
     {
       "code": "onlyWhenSelectedByOwnPlayer",
@@ -11200,6 +11260,46 @@
       "removeVersion": -1,
       "section": "decal",
       "demo": "中文：\n[贴花_图层]\n线宽度:1.5\n\nEnglish:\n[decal_图层]\nlineWidth:1.5"
+    },
+    {
+      "code": "beforeBody",
+      "translate": "在主体上层绘制",
+      "description": "该贴花层绘制在主体图层上方",
+      "type": "constant",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "Specific",
+      "demo": ""
+    },
+    {
+      "code": "afterBody",
+      "translate": "在主体上层绘制",
+      "description": "该贴花层绘制在主体图层下方",
+      "type": "constant",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "Specific",
+      "demo": ""
+    },
+    {
+      "code": "onTop",
+      "translate": "绘制顶部",
+      "description": "该贴花层绘制在最顶部",
+      "type": "constant",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "Specific",
+      "demo": ""
+    },
+    {
+      "code": "beforeUI",
+      "translate": "绘制UI上",
+      "description": "该贴花层绘制在UI上方",
+      "type": "constant",
+      "addVersion": 4,
+      "removeVersion": -1,
+      "section": "Specific",
+      "demo": ""
     }
   ]
 }

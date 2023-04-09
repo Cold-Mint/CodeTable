@@ -382,6 +382,26 @@
       "describe": "未知类型"
     },
     {
+      "name": "宏",
+      "type": "macro",
+      "rule": ".+",
+      "external": "",
+      "offset": "",
+      "list": "",
+      "tag": "",
+      "describe": "批处理类型，宏"
+    },
+    {
+      "name": "内存",
+      "type": "memory",
+      "rule": ".+",
+      "external": "",
+      "offset": "",
+      "list": "",
+      "tag": "",
+      "describe": "内存特定类型"
+    },
+    {
       "name": "内置单位",
       "type": "internalUnits",
       "rule": ".+",
